@@ -45,3 +45,37 @@ Messaging.refreshInAppMessages()
 ```objc
 [AEPMobileMessaging refreshInAppMessages];
 ```
+##updatePropositionForSurfaces
+
+<InlineAlert variant="info" slots="text"/>
+A dedicated surface for in-app (bundle Identifier) can be used as a default surface in this API. 
+
+<CodeBlock slots="heading, code" repeat="4" languages="Kotlin, Java, Swift, ObjC" />
+
+#### Android
+
+```kotlin
+let surface = Surface(name: "mobileapp://[bundleIdentifier]") //Dedicated surface for IAM
+Messaging.updatePropositionsForSurfaces([surface])
+```
+
+#### Android
+
+```java
+let surface = Surface(name: "mobileapp://[bundleIdentifier]"); //Dedicated surface for IAM
+Messaging.updatePropositionsForSurfaces([surface]);
+```
+
+#### iOS
+
+```swift
+let surface = Surface(name: "mobileapp://[bundleIdentifier]") //Dedicated surface for IAM
+Messaging.updatePropositionsForSurfaces([surface])
+```
+
+#### iOS
+
+```objc
+AEPSurface* surface = [[AEPSurface alloc] initWithPath: @"mobileapp://[bundleIdentifier]"];
+[AEPMobileMessaging updatePropositionsForSurfaces: @[surface]];
+```
